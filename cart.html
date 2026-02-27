@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina - Корзина</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">LUMINA.</a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link">Каталог</a></li>
+                    <li>
+                        <a href="cart.html" class="nav-link cart-link active">
+                            Корзина
+                            <span class="cart-badge" id="cartBadge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main page-cart">
+        <div class="container">
+            <h1 class="page-title">Корзина</h1>
+
+            <div class="cart-wrapper" id="cartContainer">
+                <!-- Cart Content -->
+                <div class="cart-items" id="cartItemsList">
+                    <!-- Items injected here by JS -->
+                    <div class="loading-spinner">Загрузка корзины...</div>
+                </div>
+
+                <!-- Cart Summary -->
+                <div class="cart-summary" id="cartSummary" style="display: none;">
+                    <h3>Сумма заказа</h3>
+                    <div class="summary-row">
+                        <span>Товары (<span id="summaryCount">0</span>):</span>
+                        <span id="summaryPrice">0 ₽</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Скидка:</span>
+                        <span>0 ₽</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Итого:</span>
+                        <span id="summaryTotal">0 ₽</span>
+                    </div>
+                    <a href="checkout.html" class="btn btn-primary btn-block">Перейти к оформлению</a>
+                </div>
+            </div>
+
+            <!-- Empty cart state -->
+            <div id="emptyCartMessage" class="empty-state" style="display: none;">
+                <div class="empty-icon">🛒</div>
+                <h2>Ваша корзина пуста</h2>
+                <p>Перейдите в каталог, чтобы выбрать стильные новинки.</p>
+                <a href="catalog.html" class="btn btn-primary">Перейти в каталог</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-logo">LUMINA.</h3>
+                    <p class="footer-desc">Современный магазин одежды для тех, кто ценит стиль и комфорт.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="catalog.html">Каталог</a></li>
+                        <li><a href="cart.html">Корзина</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Контакты</h4>
+                    <address class="footer-contacts">
+                        <p>📍 г. Москва, ул. Примерная, 10</p>
+                        <p>📞 <a href="tel:+79991234567">+7 (999) 123-45-67</a></p>
+                        <p>✉️ <a href="mailto:info@lumina.ru">info@lumina.ru</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> Lumina. Учебный проект (Дипломная работа).</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/cart-page.js"></script>
+</body>
+
+</html>
