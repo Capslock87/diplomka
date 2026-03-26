@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumina - Главная</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">LUMINA KIDS 🧸</a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Открыть меню">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link active" data-i18n="home">Главная</a></li>
+                    <li><a href="catalog.html" class="nav-link" data-i18n="catalog">Каталог</a></li>
+                    <li>
+                        <a href="cart.html" class="nav-link cart-link">
+                            <span data-i18n="cart">Корзина</span>
+                            <span class="cart-badge" id="cartBadge">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="ru">RU</button>
+                <span class="lang-sep">|</span>
+                <button class="lang-btn" data-lang="kg">KG</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <!-- Banner Section -->
+        <section class="hero-banner">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title" data-i18n="heroTitle">Новая коллекция Весна 2026</h1>
+                    <p class="hero-subtitle" data-i18n="heroSubtitle">Откройте для себя стильные новинки и обновите свой
+                        гардероб вместе с Lumina.</p>
+                    <a href="catalog.html" class="btn btn-primary btn-large" data-i18n="viewCatalog">Смотреть
+                        каталог</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Products Section -->
+        <section class="popular-products section-padding">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="popularProducts">Популярные товары</h2>
+                    <a href="catalog.html" class="btn btn-outline" data-i18n="viewAll">Смотреть все</a>
+                </div>
+
+                <div class="products-grid" id="popularProductsGrid">
+                    <!-- Products will be injected here via JS -->
+                    <div class="loading-spinner" data-i18n="loadingProducts">Загрузка товаров...</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section (Bonus) -->
+        <section class="features section-padding bg-light">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚚</div>
+                        <h3 class="feature-title" data-i18n="fastDelivery">Быстрая доставка</h3>
+                        <p class="feature-desc" data-i18n="fastDeliveryDesc">Доставляем по всей стране в кратчайшие
+                            сроки.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h3 class="feature-title" data-i18n="highQuality">Высокое качество</h3>
+                        <p class="feature-desc" data-i18n="highQualityDesc">Гарантируем качество всех представленных
+                            товаров.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3 class="feature-title" data-i18n="safePayment">Безопасная оплата</h3>
+                        <p class="feature-desc" data-i18n="safePaymentDesc">Надежная защита ваших платежных данных.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3 class="footer-logo">LUMINA KIDS 🧸</h3>
+                    <p class="footer-desc" data-i18n="footerDesc">Современный магазин одежды для тех, кто ценит стиль и
+                        комфорт.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title" data-i18n="navTitle">Навигация</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="home">Главная</a></li>
+                        <li><a href="catalog.html" data-i18n="catalog">Каталог</a></li>
+                        <li><a href="cart.html" data-i18n="cart">Корзина</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-title" data-i18n="contactsTitle">Контакты</h4>
+                    <address class="footer-contacts">
+                        <p>📍 Нарын шаары, Токтогул кочосу 10</p>
+                        <p>📞 <a href="tel:+79991234567">+996 709 57-57-11</a></p>
+                        <p>✉️ <a href="mailto:info@lumina.ru">info@lumina.ru</a></p>
+                    </address>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear">2026</span> <span data-i18n="copyright">Lumina. Учебный проект
+                        (Дипломная работа).</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- order matters: data -> cart logic -> common logic -> page specific logic -->
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/lang.js"></script>
+
+    <script>
+        // Inline script to load popular products on index page
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('popularProductsGrid');
+            if (grid && typeof products !== 'undefined') {
+                // Get 4 random products and render them
+                const shuffled = [...products].sort(() => 0.5 - Math.random());
+                const popular = shuffled.slice(0, 4);
+
+                function renderPopularProducts() {
+                    grid.innerHTML = popular.map(product => {
+                        const badgeHtml = product.badge ?
+                            `<div class="product-badge" data-i18n="${product.badge === 'Новинка' ? 'badgeNew' : 'badgeHit'}">${translations[window.currentLang][product.badge === 'Новинка' ? 'badgeNew' : 'badgeHit']}</div>` : '';
+
+                        return `
+                        <div class="product-card">
+                            <a href="product.html?id=${product.id}" class="product-link">
+                                <div class="product-img-wrap">
+                                    ${badgeHtml}
+                                    <img src="${product.image}" alt="${window.getLocalizedName(product)}" class="product-img" loading="lazy">
+                                </div>
+                                <div class="product-info">
+                                    <h3 class="product-name">${window.getLocalizedName(product)}</h3>
+                                    <div class="product-price">${window.formatPrice(product.price)}</div>
+                                </div>
+                            </a>
+                            <button class="btn btn-primary btn-block add-to-cart-btn" data-id="${product.id}" data-i18n="addToCart">${translations[window.currentLang].addToCart}</button>
+                        </div>
+                    `}).join('');
+
+                    // Re-bind Add to Cart buttons
+                    if (typeof window.Cart !== 'undefined') {
+                        window.Cart.initAddToCartButtons(grid);
+                    }
+                }
+
+                renderPopularProducts();
+                document.addEventListener('languageChanged', renderPopularProducts);
+            }
+        });
+    </script>
+</body>
+
+</html>
